@@ -53,7 +53,7 @@ PHP_FUNCTION(stemword)
     convert_to_string(arg);    
     const sb_symbol *stemmed = sb_stemmer_stem(stemmer, Z_STRVAL_P(arg), Z_STRLEN_P(arg));
     if (stemmed) {
-        ZVAL_STRING(return_value, stemmed, 1);
+        ZVAL_STRING(return_value, stemmed);
     }
 
     sb_stemmer_delete(stemmer);
