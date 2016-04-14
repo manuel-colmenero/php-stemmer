@@ -43,9 +43,6 @@ PHP_FUNCTION(stemword)
 
     struct sb_stemmer * stemmer;
 
-    //char * language = "kraaij_pohlmann";
-    //char * charenc = "UTF_8";
-
     stemmer = sb_stemmer_new(Z_STRVAL_P(lang),Z_STRVAL_P(enc));
     if(!stemmer) RETURN_NULL();
 
@@ -74,7 +71,4 @@ PHP_FUNCTION(stemword)
         if(stemmed)ZVAL_STRING( return_value, stemmed, 1);
     }
     sb_stemmer_delete(stemmer);
-
-    // RETURN_STRING(stemmed, 1);
-    //return 1;
 }
