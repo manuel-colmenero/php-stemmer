@@ -6,6 +6,10 @@ languages using Dr. M.F. Porter's Snowball API.
 
 It has a much simpler API than the stem extension found in pecl.
 
+What's new in this fork:
+- Added support for PHP7.
+- Dropped functionality: `stemword` only takes a string (no arrays allowed).
+
 Usage Example
 --------------------
 
@@ -27,7 +31,7 @@ The phpize command is used to prepare the build environment for a PHP extension.
 
 In the following sample, the sources for an extension are in a directory named stemmer-php:
 
-     # git clone https://github.com/hthetiot/php-stemmer.git
+     # git clone https://github.com/manuel-colmenero/php-stemmer.git
      # cd php-stemmer
      # phpize
      # ./configure
@@ -48,7 +52,10 @@ The modified version of this lib can be downloaded from [mysqludf.com](http://ww
 Original Source
 --------------------
 
-This version is a fork of php-stemmer hosted on Google Code orinaly made by
+This version is a fork from [Harold Thétiot's](https://github.com/hthetiot/php-stemmer)
+and the main purpose was to make it PHP7 compatible.
+
+Harold's version is a fork of php-stemmer hosted on Google Code orinaly made by
 Javeline B.V and available here: http://code.google.com/p/php-stemmer/
 
 Licence
